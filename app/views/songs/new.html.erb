@@ -3,12 +3,11 @@
 
 
 <%= form_for @song  do |f| %>
-<%binding.pry%>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :artist_name %>
   <%= f.text_field :artist_name %>
-  <%= f.collection_select :genre_name, Genre.all, :id, :name %>
+  <%= f.collection_select :genre_id, Genre.all, :id, :name %>
   <input name ="song[note_contents][]" >
   <input name ="song[note_contents][]" >
   <input name ="song[note_contents][]" >
